@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 )
 
 func init() {

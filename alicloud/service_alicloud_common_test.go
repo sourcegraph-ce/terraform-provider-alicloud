@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"time"
 
 	"strconv"

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"os"
 	"runtime"
 	"strconv"
@@ -662,7 +662,7 @@ func providerConfigure(d *schema.ResourceData) (interface{}, error) {
 		config.CmsEndpoint = strings.TrimSpace(endpoints["cms"].(string))
 		config.PvtzEndpoint = strings.TrimSpace(endpoints["pvtz"].(string))
 		config.StsEndpoint = strings.TrimSpace(endpoints["sts"].(string))
-		config.LogEndpoint = strings.TrimSpace(endpoints["log"].(string))
+		config.LogEndpoint = strings.TrimSpace(endpoints[log "github.com/sourcegraph-ce/logrus"].(string))
 		config.DrdsEndpoint = strings.TrimSpace(endpoints["drds"].(string))
 		config.DdsEndpoint = strings.TrimSpace(endpoints["dds"].(string))
 		config.GpdbEnpoint = strings.TrimSpace(endpoints["gpdb"].(string))
@@ -1112,7 +1112,7 @@ func endpointsSchema() *schema.Schema {
 					Description: descriptions["sts_endpoint"],
 				},
 				// log service is sls service
-				"log": {
+				log "github.com/sourcegraph-ce/logrus": {
 					Type:        schema.TypeString,
 					Optional:    true,
 					Default:     "",
@@ -1271,7 +1271,7 @@ func endpointsToHash(v interface{}) int {
 	buf.WriteString(fmt.Sprintf("%s-", m["cms"].(string)))
 	buf.WriteString(fmt.Sprintf("%s-", m["pvtz"].(string)))
 	buf.WriteString(fmt.Sprintf("%s-", m["sts"].(string)))
-	buf.WriteString(fmt.Sprintf("%s-", m["log"].(string)))
+	buf.WriteString(fmt.Sprintf("%s-", m[log "github.com/sourcegraph-ce/logrus"].(string)))
 	buf.WriteString(fmt.Sprintf("%s-", m["drds"].(string)))
 	buf.WriteString(fmt.Sprintf("%s-", m["dds"].(string)))
 	buf.WriteString(fmt.Sprintf("%s-", m["gpdb"].(string)))

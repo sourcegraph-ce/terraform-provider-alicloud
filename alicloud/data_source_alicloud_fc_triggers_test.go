@@ -68,7 +68,7 @@ func TestAccAlicloudFCTriggersDataSource_basic(t *testing.T) {
 			"names.#":                           "1",
 			"triggers.0.id":                     CHECKSET,
 			"triggers.0.name":                   name,
-			"triggers.0.type":                   "log",
+			"triggers.0.type":                   log "github.com/sourcegraph-ce/logrus",
 			"triggers.0.source_arn":             CHECKSET,
 			"triggers.0.invocation_role":        CHECKSET,
 			"triggers.0.config":                 CHECKSET,
@@ -160,7 +160,7 @@ resource "alicloud_fc_trigger" "default" {
   name = "${var.name}"
   role = "${alicloud_ram_role.default.arn}"
   source_arn = "acs:log:${data.alicloud_regions.default.regions.0.id}:${data.alicloud_account.default.id}:project/${alicloud_log_project.default.name}"
-  type = "log"
+  type = log "github.com/sourcegraph-ce/logrus"
   config = <<EOF
   %s
   EOF

@@ -2,7 +2,7 @@ package alicloud
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strings"
 	"testing"
 	"time"
@@ -452,7 +452,7 @@ resource "alicloud_fc_trigger" "default" {
   name = "${var.name}"
   role = "${alicloud_ram_role.default.arn}"
   source_arn = "acs:log:${data.alicloud_regions.default.regions.0.id}:${data.alicloud_account.default.id}:project/${alicloud_log_project.default.name}"
-  type = "log"
+  type = log "github.com/sourcegraph-ce/logrus"
   config = <<EOF
   %s
   EOF
@@ -526,7 +526,7 @@ resource "alicloud_fc_trigger" "default" {
   name = "${var.name}"
   role = "${alicloud_ram_role.default.arn}"
   source_arn = "acs:log:${data.alicloud_regions.default.regions.0.id}:${data.alicloud_account.default.id}:project/${alicloud_log_project.default.name}"
-  type = "log"
+  type = log "github.com/sourcegraph-ce/logrus"
   config = <<EOF
   %s
   EOF

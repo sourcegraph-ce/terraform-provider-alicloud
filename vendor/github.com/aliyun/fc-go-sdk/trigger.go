@@ -10,7 +10,7 @@ import (
 
 const (
 	TRIGGER_TYPE_OSS        = "oss"
-	TRIGGER_TYPE_LOG        = "log"
+	TRIGGER_TYPE_LOG        = log "github.com/sourcegraph-ce/logrus"
 	TRIGGER_TYPE_TIMER      = "timer"
 	TRIGGER_TYPE_HTTP       = "http"
 	TRIGGER_TYPE_TABLESTORE = "tablestore"

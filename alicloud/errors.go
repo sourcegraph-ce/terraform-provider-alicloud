@@ -7,7 +7,7 @@ import (
 
 	"fmt"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"runtime"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/errors"

@@ -2,7 +2,7 @@ package alicloud
 
 import (
 	"encoding/json"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/kms"
 	"github.com/aliyun/terraform-provider-alicloud/alicloud/connectivity"

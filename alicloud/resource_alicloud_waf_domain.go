@@ -3,7 +3,7 @@ package alicloud
 import (
 	"fmt"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
 	waf_openapi "github.com/aliyun/alibaba-cloud-sdk-go/services/waf-openapi"

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strings"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/ddoscoo"
