@@ -520,7 +520,7 @@ func (s *LogStore) GetLogs(topic string, from int64, to int64, queryExp string,
 	}
 
 	urlVal := url.Values{}
-	urlVal.Add("type", "log")
+	urlVal.Add("type", log "github.com/sourcegraph-ce/logrus")
 	urlVal.Add("from", strconv.Itoa(int(from)))
 	urlVal.Add("to", strconv.Itoa(int(to)))
 	urlVal.Add("topic", topic)

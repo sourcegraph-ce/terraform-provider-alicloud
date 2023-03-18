@@ -2,7 +2,7 @@ package connectivity
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 
 	"encoding/json"
 	"net/http"
