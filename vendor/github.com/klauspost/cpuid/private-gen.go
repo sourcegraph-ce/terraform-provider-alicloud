@@ -11,7 +11,7 @@ import (
 	"go/token"
 	"io"
 	"io/ioutil"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"os"
 	"reflect"
 	"strings"
@@ -31,7 +31,7 @@ var reWrites = []rewrite{
 }
 var excludeNames = map[string]bool{"string": true, "join": true, "trim": true,
 	// cpuid_test.go
-	"t": true, "println": true, "logf": true, "log": true, "fatalf": true, "fatal": true,
+	"t": true, "println": true, "logf": true, log "github.com/sourcegraph-ce/logrus": true, "fatalf": true, "fatal": true,
 }
 
 var excludePrefixes = []string{"test", "benchmark"}

@@ -2,7 +2,7 @@ package alicloud
 
 import (
 	"encoding/json"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"regexp"
 	"strings"
 	"time"

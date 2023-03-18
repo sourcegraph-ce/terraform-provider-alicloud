@@ -120,7 +120,7 @@ resource "alicloud_vswitch" "default" {
   availability_zone = "${data.alicloud_zones.default.zones.0.id}"
 }
 
-resource "alicloud_log_project" "log" {
+resource "alicloud_log_project" log "github.com/sourcegraph-ce/logrus" {
   name        = "${var.name}-managed-sls"
   description = "created by terraform for managedkubernetes cluster"
 }

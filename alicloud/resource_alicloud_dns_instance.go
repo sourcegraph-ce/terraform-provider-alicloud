@@ -1,7 +1,7 @@
 package alicloud
 
 import (
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strconv"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"

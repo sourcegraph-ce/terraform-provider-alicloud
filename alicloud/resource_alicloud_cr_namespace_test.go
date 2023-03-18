@@ -3,7 +3,7 @@ package alicloud
 import (
 	"encoding/json"
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strings"
 	"testing"
 	"time"

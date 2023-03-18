@@ -3,7 +3,7 @@ package oss
 import (
 	"bytes"
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"net"
 	"os"
 	"time"

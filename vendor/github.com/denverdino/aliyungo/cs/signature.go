@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 
 	"github.com/denverdino/aliyungo/util"
 )

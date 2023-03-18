@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"mime/multipart"
 	"net"
 	"os"

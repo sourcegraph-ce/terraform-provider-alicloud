@@ -2,7 +2,7 @@ package alicloud
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"os"
 	"testing"
 	"time"
@@ -222,7 +222,7 @@ func resourceEdasK8sClusterConfigDependence(name string) string {
 		  availability_zone = data.alicloud_zones.default.zones.0.id
 		}
 		
-		resource "alicloud_log_project" "log" {
+		resource "alicloud_log_project" log "github.com/sourcegraph-ce/logrus" {
 		  name        = var.name
 		  description = "created by terraform for managedkubernetes cluster"
 		}

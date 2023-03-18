@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"go/format"
 	"io/ioutil"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 )
 
 var filename = flag.String("output", "fixedhuff.go", "output file name")

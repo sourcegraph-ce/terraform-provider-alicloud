@@ -3,7 +3,7 @@ package alicloud
 import (
 	"encoding/json"
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"time"
 
 	slsPop "github.com/aliyun/alibaba-cloud-sdk-go/services/sls"

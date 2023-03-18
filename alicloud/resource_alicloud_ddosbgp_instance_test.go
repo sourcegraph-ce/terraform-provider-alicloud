@@ -7,7 +7,7 @@ import (
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/ddosbgp"
 
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strings"
 
 	"github.com/aliyun/terraform-provider-alicloud/alicloud/connectivity"

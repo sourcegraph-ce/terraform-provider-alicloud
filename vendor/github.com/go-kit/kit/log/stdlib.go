@@ -2,7 +2,7 @@ package log
 
 import (
 	"io"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"regexp"
 	"strings"
 )
